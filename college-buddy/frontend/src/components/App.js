@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link, Redirect } from "react-router-dom";
 import SpacedRepetition from "./SpacedRepetition";
+import EventEdit from "./EventEdit";
 
 
 export default function App () {
@@ -9,6 +10,7 @@ export default function App () {
         <Router>
             <Routes>
                 <Route path='/' element={<SpacedRepetition/>}/>
+                <Route path='/eventedit' element={<EventEdit/>} />
             </Routes>
         </Router>
     );

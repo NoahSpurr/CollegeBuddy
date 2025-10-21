@@ -2,7 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("todos/", views.todos, name='Todos'),
-    path("todos/edit", views.todos_edit, name="Todos_edit"),
+    path("todo", views.ToDoView.as_view()),
+    path("create_todo", views.CreateToDoView.as_view()),
+    path("reminders", views.RemindersView.as_view()),
+    path("create_reminders", views.CreateRemindersView.as_view()),
+
 ]

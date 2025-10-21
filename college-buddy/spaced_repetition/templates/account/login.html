@@ -11,6 +11,13 @@
         {% bootstrap_javascript %}
     </head>
     <body>
+        {% load socialaccount %}
+        Available providers: {{ socialaccount_providers }}
+        <br>
+        {% for provider in socialaccount_providers %}
+        <p>{{ provider.name }}: <a href="{% provider_login_url provider.id %}">Login</a></p>
+        {% endfor %}
+
         <section class="h-100 gradient-form" style="background-color: #eee;">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">

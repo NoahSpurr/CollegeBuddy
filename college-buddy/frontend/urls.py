@@ -4,5 +4,5 @@ from .views import indexView
 
 urlpatterns = [
     path('', indexView),
-
+    path('eventedit/', indexView),
 ]
